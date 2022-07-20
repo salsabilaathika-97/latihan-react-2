@@ -9,10 +9,11 @@ const Navbar = (props) => {
           <h1>{image}</h1>
         </div>
         <div className = "nav-list">
-            <p>{navList[0]}</p>
-            <p>{navList[1]}</p>
-            <p>{navList[2]}</p>
-            <p>{navList[3]}</p>
+            {
+              navList.map((item) => (
+                <p>{item}</p>
+              ))
+            }
         </div>
       </div>
       </div>
