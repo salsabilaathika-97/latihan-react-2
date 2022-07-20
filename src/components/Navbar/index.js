@@ -1,6 +1,7 @@
 import "./style.css"
 
-const Navbar = ({propNav, propImage}) => {
+const Navbar = (props) => {
+    const {propNav, propImage} = props;
     return (
       <div className = "navbar-body">
       <div className = "navbar-row">
