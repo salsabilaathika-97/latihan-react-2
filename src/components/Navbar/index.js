@@ -1,17 +1,17 @@
 import "./style.css"
 
-const Navbar = (prop) => {
-  console.log(prop.propNav);
+const Navbar = ({propNav, propImage}) => {
     return (
       <div className = "navbar-body">
       <div className = "navbar-row">
         <div>
+          <h1>{propImage}</h1>
         </div>
         <div className = "nav-list">
-            <p>{prop.propNav[0]}</p>
-            <p>{prop.propNav[1]}</p>
-            <p>{prop.propNav[2]}</p>
-            <p>{prop.propNav[3]}</p>
+            <p>{propNav[0]}</p>
+            <p>{propNav[1]}</p>
+            <p>{propNav[2]}</p>
+            <p>{propNav[3]}</p>
         </div>
       </div>
       </div>
