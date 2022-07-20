@@ -1,8 +1,12 @@
 import Navbar from "./components/Navbar";
 
+const  navList = ['our service', 'why us', 'testimonial', 'faq']
+
 const App = () => {
   return (
-    <Navbar />
+    <div>
+      <Navbar propNav = {navList} />
+    </div>
   )
 }
 
