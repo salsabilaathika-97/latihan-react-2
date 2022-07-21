@@ -12,7 +12,7 @@ const App = () => {
   }
 
   const handleShowName = (param) => {
-    console.log('Salsa');
+    console.log(param);
   }
 
   const props = {
