@@ -1,7 +1,7 @@
 import "./style.css"
 
 const Navbar = (props) => {
-    const {navList, image} = props;
+    const {navList, image, handleSidebar, showSidebar} = props;
     return (
       <div className = "navbar-body">
       <div className = "navbar-row">
@@ -14,7 +14,9 @@ const Navbar = (props) => {
                 <p>{item}</p>
               ))
             }
+            <h1 onClick={handleSidebar}>{showSidebar === true ? "x" : "="}</h1>
         </div>
+        
       </div>
       </div>
     )
