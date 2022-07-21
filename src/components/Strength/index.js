@@ -7,10 +7,9 @@ const Strength = (props) => {
             {
                 strengthList.map((item) => (
                     <><p>{item}</p>
-                    <button onClick={handleShowName}>Show Name</button></>
+                    <button onClick={() => handleShowName('Salsa')}>Show Name</button></>
                 ))
             }
-            
         </div>
     )
 }

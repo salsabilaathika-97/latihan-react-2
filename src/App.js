@@ -11,8 +11,8 @@ const App = () => {
     setshowSidebar(!showSidebar);
   }
 
-  const handleShowName = () => {
-    console.log('test');
+  const handleShowName = (param) => {
+    console.log('Salsa');
   }
 
   const props = {
