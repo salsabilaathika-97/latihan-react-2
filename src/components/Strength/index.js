@@ -1,5 +1,5 @@
 const Strength = (props) => {
-    const {strengthList, handleShowName} = props;
+    const {strengthList, handleShowName, name} = props;
     return (
         <div>
             <h1>Best Car Rental for any kind of trip in (Lokasimu)!</h1>
@@ -7,9 +7,11 @@ const Strength = (props) => {
             {
                 strengthList.map((item) => (
                     <><p>{item}</p>
-                    <button onClick={() => handleShowName('Salsa')}>Show Name</button></>
+                    <button onClick={() => handleShowName(item)}>Show Name</button></>
                 ))
+                
             }
+            <h3>{name}</h3>
         </div>
     )
 }

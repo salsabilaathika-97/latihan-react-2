@@ -12,7 +12,7 @@ const App = () => {
   }
 
   const handleShowName = (param) => {
-    console.log(param);
+    setName(param)
   }
 
   const props = {
@@ -22,6 +22,7 @@ const App = () => {
     handleSidebar,
     showSidebar,
     handleShowName,
+    name,
   }
 
   return (
