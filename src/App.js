@@ -7,6 +7,7 @@ import {useState} from "react";
 const App = () => {
   const [showSidebar, setshowSidebar] = useState(false);
   const [name, setName] = useState("");
+  const [result, setResult] = useState(null);
   
   const handleSidebar = () => {
     setshowSidebar(!showSidebar);
@@ -14,6 +15,10 @@ const App = () => {
 
   const handleShowName = (param) => {
     setName(param)
+  }
+
+  const handleNumber = (number) => {
+    setResult(number)
   }
 
   const props = {
@@ -24,13 +29,15 @@ const App = () => {
     showSidebar,
     handleShowName,
     name,
+    handleNumber,
   }
 
   return (
     <div>
       {/* <Strength {...props} /> */}
       {/* <h1 onClick={handleSidebar}>{showSidebar === true ? "x" :"="}</h1> */}
-      <Calculator />
+      <Calculator {...props}/>
+      <div style={{ border: '1px solid black'}}>{result}</div>
     </div>
   )
 }
