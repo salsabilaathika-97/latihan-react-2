@@ -5,9 +5,14 @@ import {useState} from "react";
 
 const App = () => {
   const [showSidebar, setshowSidebar] = useState(false);
+  const [name, setName] = useState("");
   
   const handleSidebar = () => {
     setshowSidebar(!showSidebar);
+  }
+
+  const handleShowName = () => {
+    console.log('test');
   }
 
   const props = {
@@ -16,12 +21,12 @@ const App = () => {
     strengthList,
     handleSidebar,
     showSidebar,
+    handleShowName,
   }
 
   return (
     <div>
-      <Navbar {...props} />
-      {/* <Strength {...props} /> */}
+      <Strength {...props} />
       {/* <h1 onClick={handleSidebar}>{showSidebar === true ? "x" :"="}</h1> */}
     </div>
   )

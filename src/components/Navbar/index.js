@@ -2,6 +2,7 @@ import "./style.css"
 
 const Navbar = (props) => {
     const {navList, image, handleSidebar, showSidebar} = props;
+
     return (
       <div className = "navbar-body">
       <div className = "navbar-row">
