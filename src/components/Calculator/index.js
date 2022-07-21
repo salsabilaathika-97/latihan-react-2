@@ -1,5 +1,5 @@
 const Calculator = (props) => {
-    const {handleNumber} = props;
+    const {handleNumber, handleAdding, handleSubstract, handleEqual} = props;
     return (
         <div>
             <div>
@@ -15,9 +15,9 @@ const Calculator = (props) => {
             <button onClick={() => handleNumber(9)}>9</button>
             </div>
             <div>
-                <button>-</button>
-                <button>+</button>
-                <button>=</button>
+                <button onClick={handleSubstract}>-</button>
+                <button onClick={handleAdding}>+</button>
+                <button onClick={handleEqual}>=</button>
             </div>
         </div>
     )

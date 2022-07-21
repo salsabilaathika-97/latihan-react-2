@@ -8,6 +8,9 @@ const App = () => {
   const [showSidebar, setshowSidebar] = useState(false);
   const [name, setName] = useState("");
   const [result, setResult] = useState(null);
+  const [arit, setArit] = useState("");
+  const [numberOne, setNumberOne] = useState(null);
+  const [numberTwo, setNumberTwo] = useState(null);
   
   const handleSidebar = () => {
     setshowSidebar(!showSidebar);
@@ -19,6 +22,33 @@ const App = () => {
 
   const handleNumber = (number) => {
     setResult(number)
+    if (numberOne == null){
+      setNumberOne(number)
+    } else {
+      setNumberTwo(number)
+    }
+  }
+
+  const handleAdding = (number) => {
+    setArit("+")
+  }
+
+  const handleSubstract = (number) =>
+  {
+    setArit("-")
+  }
+
+  const handleEqual = (number) => {
+    let equal;
+    if (arit === "+"){
+      equal = numberOne + numberTwo;
+    } else {
+      equal = numberOne - numberTwo;
+    }
+
+    setResult(equal);
+    setNumberOne(null);
+    setNumberTwo(null);
   }
 
   const props = {
@@ -30,6 +60,9 @@ const App = () => {
     handleShowName,
     name,
     handleNumber,
+    handleAdding,
+    handleSubstract,
+    handleEqual,
   }
 
   return (
