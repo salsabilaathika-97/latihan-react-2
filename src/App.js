@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Strength from "./components/Strength";
+import Calculator from "./components/Calculator";
 import { navList, image, strengthList } from "./const/staticData";
 import {useState} from "react";
 
@@ -27,8 +28,9 @@ const App = () => {
 
   return (
     <div>
-      <Strength {...props} />
+      {/* <Strength {...props} /> */}
       {/* <h1 onClick={handleSidebar}>{showSidebar === true ? "x" :"="}</h1> */}
+      <Calculator />
     </div>
   )
 }
